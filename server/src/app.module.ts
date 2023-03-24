@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { JwtStrategy } from './auth/jwt.strategy';
 import { getJwtConfig } from './config/jwt.config';
 import { PrismaService } from './prisma.service';
+import { UserModule } from './user/user.module';
 
 @Module({
   controllers: [AppController],
@@ -17,6 +18,7 @@ import { PrismaService } from './prisma.service';
       inject: [ConfigService],
       useFactory: getJwtConfig,
     }),
+    UserModule,
   ],
 })
 export class AppModule {}
