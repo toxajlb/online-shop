@@ -26,7 +26,7 @@ const translit = (str: string) => (string) => {
 export const generateSlug = (str: string): string => {
   let url: string = str.replace(/[\s]+/gi, '-');
   url = translit(url);
-
+  //eslint-disable-next-line
   url = url
     .replace(/[^0-9a-z_\-]+/gi, '-')
     .replace('---', '-')
