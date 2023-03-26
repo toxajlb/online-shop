@@ -56,7 +56,7 @@ const createProducts = async (quantity: number) => {
 };
 
 async function main() {
-  await createProducts(10);
+  await createProducts(2);
 }
 
 main()
