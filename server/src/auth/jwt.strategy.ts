@@ -8,7 +8,7 @@ import { User } from '@prisma/client';
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
-    private readonly configService: ConfigService,
+    private configService: ConfigService,
     private prisma: PrismaService,
   ) {
     super({

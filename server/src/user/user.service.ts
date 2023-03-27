@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 import { hash } from 'argon2';
-import { UserDto } from 'src/auth/dto/user.dto';
+import { UserDto } from 'src/user/user.dto';
 import { PrismaService } from 'src/prisma.service';
 import { returnUserObject } from './return-user.object';
 

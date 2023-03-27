@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { Auth } from 'src/auth/decorators/auth.decorator';
 import { CurrentUser } from 'src/auth/decorators/user.decorator';
-import { UserDto } from 'src/auth/dto/user.dto';
+import { UserDto } from 'src/user/user.dto';
 import { UserService } from './user.service';
 
 @Controller('users')
