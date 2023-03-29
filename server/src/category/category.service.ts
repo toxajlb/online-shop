@@ -16,7 +16,7 @@ export class CategoryService {
       select: returnCategoryObject,
     });
 
-    if (!category) throw new Error('Category not found');
+    if (!category) throw new NotFoundException('Category not found');
 
     return category;
   }
