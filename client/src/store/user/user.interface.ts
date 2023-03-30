@@ -1,9 +1,11 @@
+import { IUser } from "@/types/user.interface";
+
 export interface IUserState {
   email: string;
 }
 
 export interface ITokens {
-  accesToken: string;
+  accessToken: string;
   refreshToken: string;
 }
 
