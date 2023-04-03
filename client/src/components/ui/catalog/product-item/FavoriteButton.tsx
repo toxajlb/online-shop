@@ -9,8 +9,6 @@ import { UserService } from "@/services/user.service";
 const FavoriteButton: FC<{ productId: number }> = ({ productId }) => {
   const { profile } = useProfile();
 
-  if (!profile) return null;
-
   const { invalidateQueries } = useQueryClient();
 
   const { mutate } = useMutation(
@@ -22,6 +20,8 @@ const FavoriteButton: FC<{ productId: number }> = ({ productId }) => {
       },
     }
   );
+
+  if (!profile) return null;
 
   const isExists = profile.favorites.some(
     (favorite) => favorite.id === productId
