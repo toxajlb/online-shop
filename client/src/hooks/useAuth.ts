@@ -1,3 +1,3 @@
-import { usedTypedSelector } from "./usedTypedSelector";
+import { usedTypedSelector } from "./useTypedSelector";
 
 export const useAuth = () => usedTypedSelector((state) => state.user);
