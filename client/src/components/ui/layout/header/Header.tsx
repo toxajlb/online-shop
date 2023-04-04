@@ -11,6 +11,7 @@ const Header: FC = () => {
       <Link className="text-white" href="/">
         Next shop
       </Link>
+
       <div className="flex items-center justify-end gap-10">
         <Link href="/favorites" className="text-white">
           <AiOutlineHeart size={28} />
