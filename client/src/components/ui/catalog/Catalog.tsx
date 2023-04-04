@@ -6,7 +6,6 @@ import Heading from "../Heading";
 import Loader from "../Loader";
 import Button from "../button/Button";
 
-import SortDropdown from "./SortDropdown";
 import ProductItem from "./product-item/ProductItem";
 
 interface ICatalog {
@@ -27,7 +26,6 @@ const Catalog: FC<ICatalog> = ({
   return (
     <section>
       {title && <Heading className="mb-5">{title}</Heading>}
-      {isPagination && <SortDropdown />}
       {products.length ? (
         <>
           <div className="grid grid-cols-4 gap-10">

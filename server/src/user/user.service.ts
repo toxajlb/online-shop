@@ -5,8 +5,8 @@ import {
 } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 import { hash } from 'argon2';
-import { UserDto } from 'src/user/user.dto';
 import { PrismaService } from 'src/prisma.service';
+import { UserDto } from 'src/user/user.dto';
 import { returnUserObject } from './return-user.object';
 
 @Injectable()
@@ -27,6 +27,12 @@ export class UserService {
             price: true,
             images: true,
             slug: true,
+            category: {
+              select: {
+                slug: true,
+              },
+            },
+            reviews: true,
           },
         },
         ...selectObject,
