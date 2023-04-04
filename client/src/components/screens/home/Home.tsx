@@ -17,7 +17,7 @@ const Home: FC<TypePaginationProducts> = ({ products, length }) => {
     <Meta title="Home">
       <Layout>
         {!!user && <button onClick={() => logout()}>Logout</button>}
-        <Catalog title="Products" products={products || []} />
+        <Catalog title="Products" products={products || []} isPagination />
       </Layout>
     </Meta>
   );
