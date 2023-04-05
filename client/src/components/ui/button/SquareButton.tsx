@@ -4,7 +4,7 @@ import { IconType } from "react-icons";
 interface ISquareButton {
   Icon: IconType;
   onClick?: () => void;
-  number: number;
+  number?: number;
 }
 
 const SquareButton: FC<ISquareButton> = ({ Icon, onClick, number }) => {

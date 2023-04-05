@@ -1,5 +1,4 @@
 import cn from "clsx";
-import { useRouter } from "next/router";
 import { FC } from "react";
 import { RiShoppingCartLine } from "react-icons/ri";
 
@@ -18,8 +17,6 @@ const Cart: FC = () => {
 
   const { items, total } = useCart();
 
-  const push = useRouter();
-
   return (
     <div className="relative" ref={ref}>
       <SquareButton
@@ -33,10 +30,10 @@ const Cart: FC = () => {
       <div
         className={cn(
           "absolute top-[4.2rem] w-80 -left-[12.5rem] bg-secondary rounded-xl px-5 py-3 text-sm menu z-20 text-white",
-          isShow ? "open-menu" : "close-menu"
+          isShow ? "close-menu" : "open-menu"
         )}
       >
-        <div className="font-normal text-lg mb-5">My cart</div>
+        <div className="text-center font-normal text-lg mb-5">My cart</div>
 
         <div>
           {items.length ? (

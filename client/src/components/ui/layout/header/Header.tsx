@@ -2,11 +2,13 @@ import Link from "next/link";
 import { FC } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 
+import { useAuth } from "@/hooks/useAuth";
+
 import HeaderProfile from "./HeaderProfile";
 import HeaderCart from "./cart/HeaderCart";
-import SearchPage from "@/../pages/q";
 
 const Header: FC = () => {
+  const { user } = useAuth();
   return (
     <header
       className="bg-secondary w-full py-6 px-6 grid"
@@ -15,13 +17,13 @@ const Header: FC = () => {
       <Link className="text-white" href="/">
         Next shop
       </Link>
-      <SearchPage />
+      {/*  <SearchPage /> */}
       <div className="flex items-center justify-end gap-10">
         <Link href="/favorites" className="text-white">
           <AiOutlineHeart size={28} />
         </Link>
         <HeaderCart />
-        <HeaderProfile />
+        {!!user && <HeaderProfile />}
       </div>
     </header>
   );
