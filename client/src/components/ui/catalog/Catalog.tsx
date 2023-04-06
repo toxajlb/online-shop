@@ -4,7 +4,6 @@ import { IProduct } from "@/types/product.interface";
 
 import Heading from "../Heading";
 import Loader from "../Loader";
-import Button from "../button/Button";
 
 import ProductItem from "./product-item/ProductItem";
 
@@ -12,15 +11,9 @@ interface ICatalog {
   products: IProduct[];
   isLoading?: boolean;
   title?: string;
-  isPagination?: boolean;
 }
 
-const Catalog: FC<ICatalog> = ({
-  products,
-  isLoading,
-  title,
-  isPagination = false,
-}) => {
+const Catalog: FC<ICatalog> = ({ products, isLoading, title }) => {
   if (isLoading) return <Loader />;
 
   return (
@@ -33,7 +26,6 @@ const Catalog: FC<ICatalog> = ({
               <ProductItem key={product.id} product={product} />
             ))}
           </div>
-          {isPagination && <Button variant="orange">Load more</Button>}
         </>
       ) : (
         <div>There are no products</div>

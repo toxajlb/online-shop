@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 
 import HeaderProfile from "./HeaderProfile";
 import HeaderCart from "./cart/HeaderCart";
+import Search from "./cart/Search";
 
 const Header: FC = () => {
   const { user } = useAuth();
@@ -17,7 +18,7 @@ const Header: FC = () => {
       <Link className="text-white" href="/">
         Next shop
       </Link>
-      {/*  <SearchPage /> */}
+      <Search />
       <div className="flex items-center justify-end gap-10">
         <Link href="/favorites" className="text-white">
           <AiOutlineHeart size={28} />
