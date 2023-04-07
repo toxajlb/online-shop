@@ -80,7 +80,7 @@ const Auth: FC = () => {
               <div>
                 <button
                   type="button"
-                  className="inline-block opacity-20 mt-3 text-sm"
+                  className="inline-block text-primary mt-3 text-sm"
                   onClick={() =>
                     setType(type === "login" ? "register" : "login")
                   }
